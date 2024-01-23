@@ -1,0 +1,29 @@
+
+apt install ca-certificates curl openssh-server postfix tzdata perl
+
+cd /tmp
+
+curl -s https://packages.gitlab.com/install/repositories/gitlab/gitlab-ce/script.deb.sh | sudo bash
+
+create the dcript.deb.sh file
+==============================
+
+apt install gitlab-ce
+
+ufw status
+ufw allow http
+ufw allow https
+
+Open the following file
+===============================
+
+# vi /etc/gitlab/gitlab.rb
+
+
+
+Now open this folder to see the password
+# vi /etc/gitlab/initial_root_password
+6EBmSnnkDBrAixNIiUP940XYdH78XDqynDVdMegdhcY=
+
+
+sudo cat /etc/gitlab-runner/config.toml
